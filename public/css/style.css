@@ -1,0 +1,16 @@
+:root {
+    --bg-content: white;
+    --txt-clr: #0A1210;
+    --bg-clr: #FAFAFA;
+    --min-clr: #00FFC2;
+}
+
+html {
+    background-color: var(--bg-clr);
+    color: var(--txt-clr);
+    font-size: 18px;
+}
+
+p {
+    opacity: 0.8;
+}
