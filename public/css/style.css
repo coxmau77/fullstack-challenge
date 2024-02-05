@@ -2,30 +2,52 @@
 
 :root {
     --bg-content: white;
-    --txt-clr: #002119;
+    --txt-clr: #041611;
     --bg-clr: #FAFAFA;
-    --min-clr: #00FFC2;
+    --main-clr: #00FFC2;
     --font: 'Inter', sans-serif;
     --size: 17px;
-    --opacity: 0.8;
+    --opacity: 0.6;
+    accent-color: var(--main-clr);
+}
+
+body.dark-theme {
+    --txt-clr: white;
+    --bg-clr: #041611;
 }
 
 *, ::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.2s ease-out;
 }
 
-html {
+html {    
+    font-size: var(--size);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
     background-color: var(--bg-clr);
     color: var(--txt-clr);
-    font-size: var(--size);
-    font-family: var(--font);
+    height: 100dvh;
 }
 
 button {
     font-family: var(--font);
     font-size: var(--size);
+    border: 2px solid var(--main-clr);
+    background-color: var(--main-clr);
+    padding: .4rem 1rem;
+    border-radius: 8px;
+    color: var(--txt-clr);
+
+    &:hover {
+        cursor: pointer;
+        border-color: var(--txt-clr);
+    }
 }
 
 small {
@@ -35,3 +57,20 @@ small {
 p {
     opacity: var(--opacity);
 }
+
+/* <header */
+.logo img:nth-child(2) {
+    display: none;
+}
+
+span button {
+    color: orange;
+    background-color: var(--bg-content);
+    border-radius: 100vw;
+    padding: .4rem;
+}
+
+.dark-theme nav > span {
+    color: blue;
+}
+/* </header */
