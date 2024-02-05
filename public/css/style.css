@@ -1,16 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
 :root {
     --bg-content: white;
     --txt-clr: #002119;
     --bg-clr: #FAFAFA;
     --min-clr: #00FFC2;
+    --font: 'Inter', sans-serif;
+    --size: 18px;
+    --opacity: 0.8;
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     background-color: var(--bg-clr);
     color: var(--txt-clr);
-    font-size: 18px;
+    font-size: var(--size);
+    font-family: var(--font);
+}
+
+button {
+    font-family: var(--font);
+    font-size: var(--size);
+}
+
+small {
+    font-size: small;
 }
 
 p {
-    opacity: 0.8;
+    opacity: var(--opacity);
 }

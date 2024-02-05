@@ -30,4 +30,8 @@ public
 ```
 
 02. **Documentos HTML**
-Creacion de los documentos HTML, form, label, submit, etiquetas semanticas HTML
+Creacion de los documentos HTML, form, label, submit, etiquetas semanticas HTML.
+Implementacion de [Bootstrap icons](https://icons.getbootstrap.com/) CDN
+CSS _(Google Fonts con CSS Import, reset CSS, root, box-sizing)_
+HTML _(required, placeholder, autofocus, submit, autocomplete)_
+Github (portada Repository, add, commit, push)
