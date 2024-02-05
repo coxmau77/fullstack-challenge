@@ -1,5 +1,7 @@
 # Fullstack challenge
 
+[![](./public/img/img-repository-fullstack-challenge(1).png)](https://coxmau77.github.io/fullstack-challenge/public/)
+
 Proyecto basico desarrollado utilizando las tecnologias:
 - HTML
 - CSS
