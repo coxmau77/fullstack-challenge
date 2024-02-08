@@ -2,6 +2,8 @@
 
 [![](./public/img/img-repository-fullstack-challenge(1).png)](https://coxmau77.github.io/fullstack-challenge/public/)
 
+[gitHub repository](https://github.com/coxmau77/fullstack-challenge)
+
 Proyecto basico desarrollado utilizando las tecnologias:
 - HTML
 - CSS
@@ -53,6 +55,12 @@ HTML _(required, placeholder, autofocus, submit, autocomplete)_
 
 Github (portada Repository, add, commit, push)
 
-### 03. **CSS grid, flexbox, advanced selecors**
+### 03. **CSS flexbox, advanced selecors**
 
-Estilo y alineacion `header` , Flexbox, Grid, Grid templates.
+Estilo y alineacion `header` , Flexbox, 
+
+Dar proporciones a los contenedores y dar formato a los formularios
+
+### 04. **CSS grid, responsive**
+
+Grid, Grid templates, @media responsive site.

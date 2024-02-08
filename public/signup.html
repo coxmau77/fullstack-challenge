@@ -20,9 +20,12 @@
             <ul>
                 <li><a href="./add.html">add</a></li>
                 <li><a href="./signin.html">signin</a></li>
-                <li><a href="./signup.html">signup</a></li>
+                <li class="active"><a href="./signup.html">signup</a></li>
             </ul>
         </nav>
+        <button>
+            <i class="bi bi-lightbulb-off-fill"></i>
+        </button>
     </header>
     <main>
         <h1>public/signup.html</h1>
@@ -38,20 +41,22 @@
             </div>
             <div class="input-content">
                 <input type="tel" name="phone" id="phone" placeholder="+54 9 11 6699 3388" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
-                <small>codigo área Bs As +54 911</small>
+                <small>codigo área <strong>WhatsApp</strong> Bs As +54 911</small>
             </div>
             <div class="input-content">
                 <input type="password" name="password" id="password_input" placeholder="********">
                 <small>1 mayúscula, 1 caracter especial y 8 caracteres</small>
             </div>
-            <div class="input-content">
+            <div class="form-btn">
                 <button type="submit">Registrarme ahora</button>
             </div>
         </form>
+
+
     </main>
     <footer>
         <small>&#169; Copyrigth | Mauricio Cox 2024</small>
-        <div class="social">
+        <div>
             <a href="https://github.com/coxmau77" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-github"></i>
             </a>

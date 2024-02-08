@@ -18,11 +18,14 @@
                 <img src="./img/brand/nombre-empresa-temp.svg" alt="Nombre de la marca">
             </a>
             <ul>
-                <li><a href="./add.html">add</a></li>
+                <li class="active"><a href="./add.html">add</a></li>
                 <li><a href="./signin.html">signin</a></li>
                 <li><a href="./signup.html">signup</a></li>
             </ul>
         </nav>
+        <button>
+            <i class="bi bi-lightbulb-off-fill"></i>
+        </button>
     </header>
     <main>
         <h1>public/add.html</h1>
@@ -48,7 +51,8 @@
                 <input type="url" name="url" id="url_img" placeholder="https://ejemplo.com" pattern="https://.*" size="30" required />
                 <small>Url de la imagen</small>
             </div>
-            <div class="input-content">
+            <div class="form-btn">
+                <button type="button">Cancelar</button>
                 <button type="submit">Agregar y guardar</button>
             </div>
         </form>

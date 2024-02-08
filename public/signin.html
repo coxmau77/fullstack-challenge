@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body  class="dark-theme">
+<body>
     <header>
         <nav>
             <a class="logo" href="./index.html">
@@ -19,10 +19,13 @@
             </a>
             <ul>
                 <li><a href="./add.html">add</a></li>
-                <li><a href="./signin.html">signin</a></li>
+                <li class="active"><a href="./signin.html">signin</a></li>
                 <li><a href="./signup.html">signup</a></li>
             </ul>
         </nav>
+        <button>
+            <i class="bi bi-lightbulb-off-fill"></i>
+        </button>
     </header>
     <main>
         <h1>public/signin.html</h1>
@@ -36,7 +39,7 @@
                 <input type="password" name="password" id="password_input" placeholder="********">
                 <small>Tu clave secreta</small>
             </div>
-            <div class="input-content">
+            <div class="form-btn">
                 <button type="submit">Iniciar sesión</button>
             </div>
             <span>¿Aún no tienes datos de acceso? | <a href="">Registrate ahora</a></span>
