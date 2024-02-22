@@ -63,4 +63,8 @@ Dar proporciones a los contenedores y dar formato a los formularios
 
 ### 04. **CSS grid, responsive**
 
-Grid, Grid templates, @media responsive site.
+Grid, Grid templates, @media responsive site y adaptacion a los distintas resoluciones
+
+### 05. **Tailwind + Flowbite**
+
+Instalacion de Tailwind mediante CDN + integraciones de Flowbite componentes, y estilos
