@@ -13,7 +13,7 @@ Proyecto basico desarrollado utilizando las tecnologias:
 - Axios
 - Mongo DB
 
-En este proyecto podresmos registrar usuarios en la plataforma para que inicien sesiones de usuario con distintos permisos y tokens para realizar tareas segun su nivel de permisos.
+En este proyecto podremos registrar usuarios en la plataforma, para que inicien sesiones de usuario con distintos permisos y tokens para realizar tareas segun su nivel de permisos.
 
 [Documentacion grafica](https://www.figma.com/file/Qqy8RI4BIAt7HVGlSMgu2H/fullstack-challenge?type=design&node-id=0-1&mode=design&t=0Ilho6AltuAmwFqA-0)
 
@@ -53,7 +53,7 @@ CSS _(`Google Fonts con CSS Import`, `reset CSS`, `root`, `box-sizing`)_
 
 HTML _(required, placeholder, autofocus, submit, autocomplete)_
 
-Github (portada Repository, add, commit, push)
+Github (GitHub Pages, portada Repository, add, commit, push)
 
 ### 03. **CSS flexbox, advanced selecors**
 
@@ -67,4 +67,4 @@ Grid, Grid templates, @media responsive site y adaptacion a los distintas resolu
 
 ### 05. **Tailwind + Flowbite**
 
-Instalacion de Tailwind mediante CDN + integraciones de Flowbite componentes, y estilos en `public/home.html`
+Instalacion de Tailwind mediante CDN + integraciones de Flowbite componentes, y estilos en [`public/home.html`](https://coxmau77.github.io/fullstack-challenge/public/home.html)
