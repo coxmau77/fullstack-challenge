@@ -68,3 +68,6 @@ Grid, Grid templates, @media responsive site y adaptacion a los distintas resolu
 ### 05. **[Tailwind](https://tailwindcss.com/) + [Flowbite](https://flowbite.com)**
 
 Instalacion de Tailwind mediante CDN + integraciones de Flowbite componentes, y estilos en [`public/home.html`](https://coxmau77.github.io/fullstack-challenge/public/home.html)
+
+Correccion de style para el dark mode
+
