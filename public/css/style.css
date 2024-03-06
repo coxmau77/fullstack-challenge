@@ -12,13 +12,13 @@
   --btn-txt: var(--txt-clr);
 
   --font: "Inter", sans-serif;
-  --size: 17px;
+  /* --size: 17px; */
   --opacity: 0.6;
   accent-color: var(--main-clr);
 }
 
 body.dark-theme {
-  --bg-body: #041611;
+  --bg-body: #111827;
   --txt-clr: white;
   --bg-content: rgba(255, 255, 255, 0.248);
 }
@@ -33,7 +33,15 @@ body.dark-theme {
 }
 
 html {
-  font-size: var(--size);
+  /* 16px */
+  font-size: 100%;
+
+  /* 14px */
+  /* font-size: 87.5%; */
+
+   /*12px*/
+  /* font-size: 75%; */
+
   scroll-behavior: smooth;
   /* < Estilos temporales */
   /* max-width: 35rem;
@@ -231,7 +239,7 @@ footer {
 @media (min-width: 1000px) {
   body,
   html {
-    font-size: larger;
+    font-size: 1.2rem;
   }
 }
 
