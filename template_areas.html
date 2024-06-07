@@ -18,6 +18,7 @@
             --opacity: 0.6;
             --icon-size: 2.4rem;
             --paddin-x: 1.8rem;
+            --paddin-y: 1.2rem;
             --spacing: 1rem 2rem;
             accent-color: var(--main-clr);
         }
@@ -39,22 +40,22 @@
             grid-template-rows: auto 1fr auto;
             grid-template-areas: "header" "main" "footer";
             overflow-x: hidden;
+            /* background-color: pink; */
 
-            header,
             main {
-                max-width: 1000px;
                 margin: 0 auto;
                 padding: var(--spacing);
+                /* background-color: rgb(248, 129, 149); */
             }
 
             header {
                 /* background-color: lawngreen; */
                 grid-area: header;
-                width: 100%;
                 border-bottom: 1px dotted var(--dark-clr);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: var(--spacing);
 
                 a {
                     display: flex;
@@ -64,6 +65,10 @@
                     :first-child {
                         width: var(--icon-size);
                     }
+
+                    :last-child {
+                        display: none;
+                    }
                 }
 
                 span {
@@ -71,6 +76,10 @@
                     display: flex;
                     align-items: center;
                     gap: .4rem;
+
+                    p {
+                        display: none;
+                    }
 
                     img {
                         width: var(--icon-size);
@@ -83,9 +92,18 @@
             }
 
             main {
-                background-color: rgba(255, 182, 193, 0.337);
+                /* background-color: rgba(255, 182, 193, 0.337); */
                 grid-area: main;
-                width: 100%;
+
+                h1 {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    padding: var(--paddin-y) 0;
+
+                    &::first-letter {
+                        text-transform: uppercase;
+                    }
+                }
             }
 
             footer {
@@ -105,17 +123,21 @@
             /* background-color: #00ffc2; */
 
             ul {
-                /* border-radius: 1vw; */
                 width: fit-content;
-                border: solid 1px var(--dark-clr);
-                background-color: var(--light-clr);
                 display: flex;
                 margin: 0 auto;
                 overflow: hidden;
                 align-items: center;
-                border-radius: 1vw;
+                border-radius: 100vw;
+                -webkit-box-shadow: 0px 6px 40px 4px rgba(4, 22, 17, 0.2);
+                -moz-box-shadow: 0px 6px 40px 4px rgba(4, 22, 17, 0.2);
+                box-shadow: 0px 6px 40px 4px rgba(4, 22, 17, 0.2);
 
                 li {
+
+                    /* background-color: red; */
+                    background-color: var(--light-clr);
+
 
                     &:first-child {
                         a {
@@ -156,8 +178,10 @@
 
         .active {
             background-color: var(--dark-clr);
-            color: var(--main-clr);
-            /* border: 1px solid red; */
+
+            a {
+                color: var(--main-clr);
+            }
         }
     </style>
 </head>
@@ -174,7 +198,7 @@
         </span>
     </header>
     <main>
-        <p>main content</p>
+        <h1>main content</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus quas ad impedit, distinctio
             exercitationem mollitia repellendus amet in voluptate saepe qui placeat labore vel perspiciatis, quos
@@ -323,7 +347,7 @@
     <nav>
         <ul>
             <li>
-                <a href="http://" class="active">
+                <a href="http://">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
@@ -331,7 +355,7 @@
                     <span>inicio</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="http://">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
