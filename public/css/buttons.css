@@ -1,0 +1,17 @@
+button {
+    font-family: var(--font);
+    font-size: var(--size);
+    background-color: var(--btn-bg);
+    border: 2px solid var(--main-clr);
+
+    margin: 1rem auto;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    color: var(--btn-txt);
+
+    &:hover {
+        border: 2px solid var(--main-clr);
+        cursor: pointer;
+        border-color: var(--border-clr);
+    }
+}

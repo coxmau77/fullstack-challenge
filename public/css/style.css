@@ -2,7 +2,7 @@
 
 :root {
   --main-clr: #00ffc2;
-  --bg-body: whitesmoke;
+  /* --bg-body: whitesmoke; */
   --txt-clr: #041611;
 
   --bg-content: white;
@@ -15,6 +15,9 @@
   /* --size: 17px; */
   --opacity: 0.6;
   accent-color: var(--main-clr);
+
+  --bg-light: #f5f5f5;
+  --bg-dark: #041611;
 }
 
 body.dark-theme {
@@ -34,12 +37,13 @@ body.dark-theme {
 
 html {
   /* 16px */
-  font-size: 100%;
+  /* font-size: 100%; */
+  font-size: medium;
 
   /* 14px */
   /* font-size: 87.5%; */
 
-   /*12px*/
+  /*12px*/
   /* font-size: 75%; */
 
   scroll-behavior: smooth;
@@ -52,61 +56,9 @@ html {
 
 body {
   font-family: var(--font);
-  background-color: var(--bg-body);
+  background-color: var(--bg-light);
   color: var(--txt-clr);
   text-wrap: balance;
-}
-
-form {
-  width: 100%;
-  margin: 2rem auto;
-
-  .form-btn {
-    display: flex;
-    justify-content: flex-end;
-
-    [type="button"] {
-      background-color: transparent;
-      border-color: var(--txt-clr);
-      color: var(--txt-clr);
-    }
-  }
-}
-
-input,
-textarea {
-  font-family: var(--font);
-  font-size: var(--size);
-  background-color: var(--bg-content);
-  color: var(--txt-clr);
-  border: none;
-  border-radius: 4px;
-  width: 100%;
-  padding: 0.6rem;
-  margin-top: 1rem;
-}
-
-textarea {
-  text-wrap: balance;
-  resize: none;
-}
-
-button {
-  font-family: var(--font);
-  font-size: var(--size);
-  background-color: var(--btn-bg);
-  border: 2px solid var(--main-clr);
-
-  margin: 1rem auto;
-  padding: 0.4rem 1rem;
-  border-radius: 8px;
-  color: var(--btn-txt);
-
-  &:hover {
-    border: 2px solid var(--main-clr);
-    cursor: pointer;
-    border-color: var(--border-clr);
-  }
 }
 
 small {
@@ -189,7 +141,7 @@ main {
 }
 
 footer {
-  background-color: #041611;
+  background-color: var(--bg-dark);
   padding: 1.4rem;
   color: white;
   text-align: center;
@@ -213,11 +165,11 @@ footer {
 }
 
 @media (max-width: 360px) {
-  nav > a {
+  nav>a {
     background-color: pink;
   }
 
-  
+
 }
 
 @media (min-width: 600px) {
@@ -237,6 +189,7 @@ footer {
 }
 
 @media (min-width: 1000px) {
+
   body,
   html {
     font-size: 1.2rem;
@@ -262,6 +215,7 @@ footer {
 }
 
 @media (min-width: 1600px) {
+
   body,
   html {
     font-size: xx-large;

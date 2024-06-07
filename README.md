@@ -13,11 +13,22 @@ Proyecto basico desarrollado utilizando las tecnologias:
 - Axios
 - Mongo DB
 
-En este proyecto podremos registrar usuarios en la plataforma, para que inicien sesiones de usuario con distintos permisos y tokens para realizar tareas segun su nivel de permisos.
+En este proyecto podremos registrar usuarios en la plataforma y lograr hacer un CRUD con este usuario.
 
 [Documentacion grafica](https://www.figma.com/file/Qqy8RI4BIAt7HVGlSMgu2H/fullstack-challenge?type=design&node-id=0-1&mode=design&t=0Ilho6AltuAmwFqA-0)
 
 ## Proceso
+
+### 00. **Prework de nuestro entorno de trabajo**
+
+- Instalación de VSC _Visual Studio Code_
+- Instalación de Git
+- Creación de cuenta en GitHub
+- Creación de cuenta en Figma
+- Creación de cuenta en MongoAtlas
+- Creación de cuenta en RENDER
+
+
 
 ### 01. **Estructura basica del challenge**
 
@@ -31,7 +42,9 @@ Primeros pasos en `Figma`.
 
 Aplicamos estilos CSS utilizando `selectores avanzados`, `CSS Nesting`, `Variables CSS`, Pseudo elementos como `:root`, `:after`, `:before`, Concepto mobile First, rem, em. 
 
-Creacion y vinculacion con los primeros documentos en un ***lenguaje de programacion***, javaScript `script.js` `server.js`, 
+Creacion y vinculacion con los primeros documentos en un ***lenguaje de programacion***, javaScript `script.js` `server.js`
+
+Primeros conceptos del Modelo `Cliente >< Servidor` - parte I
 
 ``` 
 public
@@ -55,7 +68,7 @@ HTML _(required, placeholder, autofocus, submit, autocomplete)_
 
 Github (GitHub Pages, portada Repository, add, commit, push)
 
-### 03. **CSS flexbox, advanced selecors**
+### 03. **CSS flexbox, advanced selectors**
 
 Estilo y alineacion `header` , Flexbox, 
 
@@ -69,5 +82,17 @@ Grid, Grid templates, @media responsive site y adaptacion a los distintas resolu
 
 Instalacion de Tailwind mediante CDN + integraciones de Flowbite componentes, y estilos en [`public/home.html`](https://coxmau77.github.io/fullstack-challenge/public/home.html)
 
-Correccion de style para el dark mode
+### 06. **JavaScript**
+
+Revision de conceptos e implementacion de variables y constantes, tipos de datos, `string`, `int`, `Boolean`, utilizacion de `console.log`, `console.info`, `console.warn`, `console.error`, `alert` y `prompt`
+
+Etiqueta form, input(text, password, button, submit)
+
+``document.querySelector()`` para almacenar en una variable y acceder a su valor con el Metodo `.value`
+
+Consola del navegador(cliente) como herramienta de desarrollo
+
+Primeros conceptos del Modelo `Cliente >< Servidor` - parte II
+
+Crear en una actividad donde se pueda utilizar la informacion que se captura en un input de un formulario (login o signin)
 
