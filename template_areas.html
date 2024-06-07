@@ -52,11 +52,40 @@
                 grid-area: header;
                 width: 100%;
                 border-bottom: 1px dotted var(--dark-clr);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    gap: .2rem;
+                    align-items: center;
+
+                    :first-child {
+                        width: var(--icon-size);
+                    }
+                }
+
+                span {
+
+                    display: flex;
+                    align-items: center;
+                    gap: .4rem;
+
+                    img {
+                        width: var(--icon-size);
+                        border: 2px solid var(--dark-clr);
+                        border-radius: 10vw;
+                        overflow: hidden;
+                        object-fit: cover;
+                    }
+                }
             }
 
             main {
-                /* background-color: lightpink; */
+                background-color: rgba(255, 182, 193, 0.337);
                 grid-area: main;
+                width: 100%;
             }
 
             footer {
@@ -76,7 +105,7 @@
             /* background-color: #00ffc2; */
 
             ul {
-                border-radius: 1vw;
+                /* border-radius: 1vw; */
                 width: fit-content;
                 border: solid 1px var(--dark-clr);
                 background-color: var(--light-clr);
@@ -84,6 +113,7 @@
                 margin: 0 auto;
                 overflow: hidden;
                 align-items: center;
+                border-radius: 1vw;
 
                 li {
 
@@ -123,19 +153,29 @@
                 }
             }
         }
+
+        .active {
+            background-color: var(--dark-clr);
+            color: var(--main-clr);
+            /* border: 1px solid red; */
+        }
     </style>
 </head>
 
 <body>
     <header>
         <a href="http://">
-            <img src="" alt="icon">
+            <img src="./public/img/brand/icon-temp.svg" alt="icon">
+            <img src="./public/img/brand/company-name.svg" alt="company">
         </a>
-        <span>header content</span>
+        <span>
+            <p>email@email.com</p>
+            <img src="./public/img/user/img-user-profile.png" alt="">
+        </span>
     </header>
     <main>
         <p>main content</p>
-        <!-- <p>
+        <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus quas ad impedit, distinctio
             exercitationem mollitia repellendus amet in voluptate saepe qui placeat labore vel perspiciatis, quos
             facilis
@@ -275,7 +315,7 @@
             odit
             itaque ipsa. Dignissimos praesentium alias dolorum nemo atque eveniet optio, voluptatem eligendi accusamus
             tenetur adipisci repellendus dicta, perferendis amet laboriosam totam culpa, dolorem natus ratione.
-        </p> -->
+        </p>
     </main>
     <footer>
         <small>footer content</small>
@@ -283,7 +323,7 @@
     <nav>
         <ul>
             <li>
-                <a href="http://">
+                <a href="http://" class="active">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
