@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template areas</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!-- link temporal -->
+    <link rel="stylesheet" href="./public/css/index.css">
+    <style>
+        /* utilizar tecnica mobile first */
+        :root {
+            --main-clr: #00ffc2;
+            --light-clr: #f5f5f5;
+            --dark-clr: #041611;
+            --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            --opacity: 0.6;
+            --icon-size: 2.4rem;
+            --paddin-x: 1.8rem;
+            --spacing: 1rem 2rem;
+            accent-color: var(--main-clr);
+        }
+
+        * {
+            transition: all .2s ease-in-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: var(--font);
+        }
+
+        body {
+            font-size: medium;
+            background-color: var(--light-clr);
+            display: grid;
+            height: 100dvh;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "header" "main" "footer";
+            overflow-x: hidden;
+
+            header,
+            main {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: var(--spacing);
+            }
+
+            header {
+                /* background-color: lawngreen; */
+                grid-area: header;
+                width: 100%;
+                border-bottom: 1px dotted var(--dark-clr);
+            }
+
+            main {
+                /* background-color: lightpink; */
+                grid-area: main;
+            }
+
+            footer {
+                background-color: var(--dark-clr);
+                color: var(--light-clr);
+                grid-area: footer;
+                padding: 2rem 2rem 10rem 2rem;
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            bottom: .5rem;
+            /* background-color: #00ffc2; */
+
+            ul {
+                border-radius: 1vw;
+                width: fit-content;
+                border: solid 1px var(--dark-clr);
+                background-color: var(--light-clr);
+                display: flex;
+                margin: 0 auto;
+                overflow: hidden;
+                align-items: center;
+
+                li {
+
+                    &:first-child {
+                        a {
+                            padding-left: var(--paddin-x);
+                        }
+                    }
+
+                    &:last-child {
+                        a {
+                            padding-right: var(--paddin-x);
+                        }
+                    }
+
+                    a {
+                        color: var(--dark-clr);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        row-gap: .2rem;
+                        padding: .4rem .8rem;
+
+                        svg {
+                            width: var(--icon-size);
+                            height: var(--icon-size);
+                            fill: currentColor;
+                        }
+
+                        &:hover {
+                            background-color: var(--dark-clr);
+                            color: var(--light-clr);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="http://">
+            <img src="" alt="icon">
+        </a>
+        <span>header content</span>
+    </header>
+    <main>
+        <p>main content</p>
+        <!-- <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus quas ad impedit, distinctio
+            exercitationem mollitia repellendus amet in voluptate saepe qui placeat labore vel perspiciatis, quos
+            facilis
+            et? Repellendus ex cum quae impedit, necessitatibus placeat distinctio vitae beatae rerum facere ratione
+            aperiam
+            molestiae? Iure veniam porro non repellendus neque amet repellat dignissimos quidem odio dolorum dolore
+            repudiandae praesentium quae ea reprehenderit dolor ipsa, corporis explicabo, sunt culpa quia. Est, animi?
+            Eligendi modi numquam tenetur, corporis explicabo reprehenderit aperiam accusamus necessitatibus, veniam
+            voluptatem sit consequuntur, perferendis sunt dolore vero qui ipsum molestias minus totam alias. Adipisci
+            sint
+            inventore quas et!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus quas ad impedit, distinctio
+            exercitationem mollitia repellendus amet in voluptate saepe qui placeat labore vel perspiciatis, quos
+            facilis
+            et? Repellendus ex cum quae impedit, necessitatibus placeat distinctio vitae beatae rerum facere ratione
+            aperiam
+            molestiae? Iure veniam porro non repellendus neque amet repellat dignissimos quidem odio dolorum dolore
+            repudiandae praesentium quae ea reprehenderit dolor ipsa, corporis explicabo, sunt culpa quia. Est, animi?
+            Eligendi modi numquam tenetur, corporis explicabo reprehenderit aperiam accusamus necessitatibus, veniam
+            voluptatem sit consequuntur, perferendis sunt dolore vero qui ipsum molestias minus totam alias. Adipisci
+            sint
+            inventore quas et!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus quas ad impedit, distinctio
+            exercitationem mollitia repellendus amet in voluptate saepe qui placeat labore vel perspiciatis, quos
+            facilis
+            et? Repellendus ex cum quae impedit, necessitatibus placeat distinctio vitae beatae rerum facere ratione
+            aperiam
+            molestiae? Iure veniam porro non repellendus neque amet repellat dignissimos quidem odio dolorum dolore
+            repudiandae praesentium quae ea reprehenderit dolor ipsa, corporis explicabo, sunt culpa quia. Est, animi?
+            Eligendi modi numquam tenetur, corporis explicabo reprehenderit aperiam accusamus necessitatibus, veniam
+            voluptatem sit consequuntur, perferendis sunt dolore vero qui ipsum molestias minus totam alias. Adipisci
+            sint
+            inventore quas et!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus quas ad impedit, distinctio
+            exercitationem mollitia repellendus amet in voluptate saepe qui placeat labore vel perspiciatis, quos
+            facilis
+            et? Repellendus ex cum quae impedit, necessitatibus placeat distinctio vitae beatae rerum facere ratione
+            aperiam
+            molestiae? Iure veniam porro non repellendus neque amet repellat dignissimos quidem odio dolorum dolore
+            repudiandae praesentium quae ea reprehenderit dolor ipsa, corporis explicabo, sunt culpa quia. Est, animi?
+            Eligendi modi numquam tenetur, corporis explicabo reprehenderit aperiam accusamus necessitatibus, veniam
+            voluptatem sit consequuntur, perferendis sunt dolore vero qui ipsum molestias minus totam alias. Adipisci
+            sint
+            inventore quas et!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus quas ad impedit, distinctio
+            exercitationem mollitia repellendus amet in voluptate saepe qui placeat labore vel perspiciatis, quos
+            facilis
+            et? Repellendus ex cum quae impedit, necessitatibus placeat distinctio vitae beatae rerum facere ratione
+            aperiam
+            molestiae? Iure veniam porro non repellendus neque amet repellat dignissimos quidem odio dolorum dolore
+            repudiandae praesentium quae ea reprehenderit dolor ipsa, corporis explicabo, sunt culpa quia. Est, animi?
+            Eligendi modi numquam tenetur, corporis explicabo reprehenderit aperiam accusamus necessitatibus, veniam
+            voluptatem sit consequuntur, perferendis sunt dolore vero qui ipsum molestias minus totam alias. Adipisci
+            sint
+            inventore quas et!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus quas ad impedit, distinctio
+            exercitationem mollitia repellendus amet in voluptate saepe qui placeat labore vel perspiciatis, quos
+            facilis
+            et? Repellendus ex cum quae impedit, necessitatibus placeat distinctio vitae beatae rerum facere ratione
+            aperiam
+            molestiae? Iure veniam porro non repellendus neque amet repellat dignissimos quidem odio dolorum dolore
+            repudiandae praesentium quae ea reprehenderit dolor ipsa, corporis explicabo, sunt culpa quia. Est, animi?
+            Eligendi modi numquam tenetur, corporis explicabo reprehenderit aperiam accusamus necessitatibus, veniam
+            voluptatem sit consequuntur, perferendis sunt dolore vero qui ipsum molestias minus totam alias. Adipisci
+            sint
+            inventore quas et!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus quas ad impedit, distinctio
+            exercitationem mollitia repellendus amet in voluptate saepe qui placeat labore vel perspiciatis, quos
+            facilis
+            et? Repellendus ex cum quae impedit, necessitatibus placeat distinctio vitae beatae rerum facere ratione
+            aperiam
+            molestiae? Iure veniam porro non repellendus neque amet repellat dignissimos quidem odio dolorum dolore
+            repudiandae praesentium quae ea reprehenderit dolor ipsa, corporis explicabo, sunt culpa quia. Est, animi?
+            Eligendi modi numquam tenetur, corporis explicabo reprehenderit aperiam accusamus necessitatibus, veniam
+            voluptatem sit consequuntur, perferendis sunt dolore vero qui ipsum molestias minus totam alias. Adipisci
+            sint
+            inventore quas et!
+            inventore quas et!
+            inventore quas et!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iste incidunt nostrum suscipit debitis.
+            Eius
+            recusandae commodi architecto beatae quod accusamus sint est, ut sapiente nobis fugit voluptatibus hic quia
+            dicta inventore deleniti iusto? Iure odio, dolores possimus adipisci sequi recusandae, consequatur eius vel
+            accusantium mollitia nulla, praesentium assumenda voluptatibus corrupti culpa nobis! Natus mollitia beatae
+            fugit
+            aut magni, illum consequatur sed nemo dolores autem voluptatem, dolorem adipisci error, ipsa repellat
+            dignissimos doloribus! Sapiente blanditiis nisi doloribus iste animi officia autem quas? Odit, atque magni
+            laborum ut quaerat hic repellendus delectus illo qui tempore porro magnam a earum ipsum ratione illum, alias
+            sint reprehenderit beatae ipsa voluptatum! Debitis nemo delectus iure accusamus nostrum atque? Accusantium
+            reiciendis a, quo commodi perspiciatis nesciunt explicabo quisquam veritatis quidem doloribus, numquam
+            possimus,
+            quis debitis ipsa dolores architecto qui delectus minima ad. Rerum, tempore voluptas itaque, numquam
+            adipisci
+            officia esse magnam aperiam non pariatur fuga eum quia sapiente odit, minus possimus animi vitae eveniet
+            earum
+            assumenda unde. Aliquid iure vitae, quam doloremque repudiandae saepe, vero nostrum maxime suscipit eius
+            odit
+            itaque ipsa. Dignissimos praesentium alias dolorum nemo atque eveniet optio, voluptatem eligendi accusamus
+            tenetur adipisci repellendus dicta, perferendis amet laboriosam totam culpa, dolorem natus ratione.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iste incidunt nostrum suscipit debitis.
+            Eius
+            recusandae commodi architecto beatae quod accusamus sint est, ut sapiente nobis fugit voluptatibus hic quia
+            dicta inventore deleniti iusto? Iure odio, dolores possimus adipisci sequi recusandae, consequatur eius vel
+            accusantium mollitia nulla, praesentium assumenda voluptatibus corrupti culpa nobis! Natus mollitia beatae
+            fugit
+            aut magni, illum consequatur sed nemo dolores autem voluptatem, dolorem adipisci error, ipsa repellat
+            dignissimos doloribus! Sapiente blanditiis nisi doloribus iste animi officia autem quas? Odit, atque magni
+            laborum ut quaerat hic repellendus delectus illo qui tempore porro magnam a earum ipsum ratione illum, alias
+            sint reprehenderit beatae ipsa voluptatum! Debitis nemo delectus iure accusamus nostrum atque? Accusantium
+            reiciendis a, quo commodi perspiciatis nesciunt explicabo quisquam veritatis quidem doloribus, numquam
+            possimus,
+            quis debitis ipsa dolores architecto qui delectus minima ad. Rerum, tempore voluptas itaque, numquam
+            adipisci
+            officia esse magnam aperiam non pariatur fuga eum quia sapiente odit, minus possimus animi vitae eveniet
+            earum
+            assumenda unde. Aliquid iure vitae, quam doloremque repudiandae saepe, vero nostrum maxime suscipit eius
+            odit
+            itaque ipsa. Dignissimos praesentium alias dolorum nemo atque eveniet optio, voluptatem eligendi accusamus
+            tenetur adipisci repellendus dicta, perferendis amet laboriosam totam culpa, dolorem natus ratione.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iste incidunt nostrum suscipit debitis.
+            Eius
+            recusandae commodi architecto beatae quod accusamus sint est, ut sapiente nobis fugit voluptatibus hic quia
+            dicta inventore deleniti iusto? Iure odio, dolores possimus adipisci sequi recusandae, consequatur eius vel
+            accusantium mollitia nulla, praesentium assumenda voluptatibus corrupti culpa nobis! Natus mollitia beatae
+            fugit
+            aut magni, illum consequatur sed nemo dolores autem voluptatem, dolorem adipisci error, ipsa repellat
+            dignissimos doloribus! Sapiente blanditiis nisi doloribus iste animi officia autem quas? Odit, atque magni
+            laborum ut quaerat hic repellendus delectus illo qui tempore porro magnam a earum ipsum ratione illum, alias
+            sint reprehenderit beatae ipsa voluptatum! Debitis nemo delectus iure accusamus nostrum atque? Accusantium
+            reiciendis a, quo commodi perspiciatis nesciunt explicabo quisquam veritatis quidem doloribus, numquam
+            possimus,
+            quis debitis ipsa dolores architecto qui delectus minima ad. Rerum, tempore voluptas itaque, numquam
+            adipisci
+            officia esse magnam aperiam non pariatur fuga eum quia sapiente odit, minus possimus animi vitae eveniet
+            earum
+            assumenda unde. Aliquid iure vitae, quam doloremque repudiandae saepe, vero nostrum maxime suscipit eius
+            odit
+            itaque ipsa. Dignissimos praesentium alias dolorum nemo atque eveniet optio, voluptatem eligendi accusamus
+            tenetur adipisci repellendus dicta, perferendis amet laboriosam totam culpa, dolorem natus ratione.
+        </p> -->
+    </main>
+    <footer>
+        <small>footer content</small>
+    </footer>
+    <nav>
+        <ul>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                    </svg>
+                    <span>inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                    </svg>
+                    <span>iconName</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                    </svg>
+                    <span>iconName</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</body>
+
+</html>
