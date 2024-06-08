@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- <html lang="es-AR" class="light"> -->
+<html lang="es-AR" class="light">
 <html lang="es-AR" class="dark">
 
 <head>
@@ -25,10 +25,17 @@
             --main-clr: #00ffc2;
             --light: #f3fffc;
             --dark: #000a08;
+            --danger-clr: #ff6347;
+
+            --btn-txt: #000a08;
+            --btn-bg: #f3fffc;
+            --btn-bdr: #000a08;
 
             --bg-clr: var(--light);
             --txt-clr: var(--dark);
+
             --input-br: var(--dark);
+            --input-bdr: #000a08;
 
             accent-color: var(--main-clr);
             color: var(--txt-clr);
@@ -47,7 +54,7 @@
 
             h1 {
                 font-size: 3rem;
-
+                text-shadow: 0px 0px 50px var(--main-clr);
             }
 
             h2 {
@@ -70,6 +77,10 @@
                 --bg-clr: var(--dark);
                 --txt-clr: var(--light);
                 --input-br: var(--light);
+
+                --btn-txt: #f3fffc;
+                --btn-bg: #000a08;
+                --btn-bdr: #f3fffc;
             }
         }
 
@@ -228,29 +239,54 @@
             [data-btn-group] {
                 /* background-color: yellow; */
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
+                gap: 4vw;
                 margin-top: 1rem;
 
-                &:first-child {
-                    /* no funciona aun */
-                    background-color: pink;
-                }
+
 
                 button {
-                    padding: .4rem 1rem;
-                    border: 2px solid var(--main-clr);
-                    color: var(--main-clr);
-                    background-color: var(--dark-clr);
-                    border-radius: 10vw;
+
+                    background-color: var(--dark);
+                    color: var(--light);
+                    transition: box-shadow 300ms ease-in-out;
 
                     &:hover {
                         background-color: var(--main-clr);
-                        border-color: var(--dark-clr);
-                        color: var(--dark-clr);
+                        color: var(--dark);
+                        border-color: var(--dark);
                         cursor: pointer;
+                        box-shadow: 0px 0px 35px 8px var(--main-clr);
+                    }
+
+                    &:first-child {
+                        background-color: transparent;
+                        color: var(--btn-txt);
+
+                        &:hover {
+                            color: var(--danger-clr);
+                            border-color: var(--danger-clr);
+                            box-shadow: none;
+                        }
                     }
 
                 }
+            }
+        }
+
+        button {
+            padding: .4rem 1rem;
+            border: 2px solid var(--btn-bdr);
+            color: var(--btn-txt);
+            border-radius: 10vw;
+            font-size: medium;
+            font-weight: 600;
+
+            &:hover {
+                background-color: var(--main-clr);
+                cursor: pointer;
+                border-color: var(--main-clr);
+                color: var(--dark);
             }
         }
     </style>
@@ -282,6 +318,9 @@
                 <button>confirm</button>
             </div>
         </form>
+        <button>Lorem, ipsum dolor.</button>
+        <button>Lorem, ipsum dolor.</button>
+        <button>Lorem, ipsum dolor.</button>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quod consequatur eveniet cupiditate animi
             esse magnam architecto culpa quo nemo, ipsa amet expedita sapiente aliquid rem vero. Beatae tempore illo
             repudiandae id odit placeat minima modi, vel quibusdam error debitis? Corporis suscipit voluptatum
