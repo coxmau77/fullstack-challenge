@@ -120,6 +120,10 @@
                         text-transform: uppercase;
                     }
                 }
+
+                p {
+                    text-align: center;
+                }
             }
 
             footer {
@@ -150,22 +154,7 @@
                 box-shadow: 0px 6px 40px 4px rgba(4, 22, 17, 0.2);
 
                 li {
-
-                    /* background-color: red; */
                     background-color: var(--light-clr);
-
-
-                    &:first-child {
-                        a {
-                            padding-left: var(--paddin-x);
-                        }
-                    }
-
-                    &:last-child {
-                        a {
-                            padding-right: var(--paddin-x);
-                        }
-                    }
 
                     a {
                         color: var(--dark-clr);
@@ -174,7 +163,8 @@
                         align-items: center;
                         justify-content: center;
                         row-gap: .2rem;
-                        padding: .4rem .8rem;
+                        padding: .8rem 0;
+                        min-width: 6rem;
                         font-size: medium;
 
                         svg {
@@ -203,7 +193,8 @@
 
         form {
             /* background-color: beige; */
-            margin: 2rem 0;
+            margin: 2rem auto;
+            max-width: 450px;
 
             input {
                 box-sizing: border-box;
@@ -267,7 +258,7 @@
                 <button>confirm</button>
             </div>
         </form>
-        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quod consequatur eveniet cupiditate animi
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quod consequatur eveniet cupiditate animi
             esse magnam architecto culpa quo nemo, ipsa amet expedita sapiente aliquid rem vero. Beatae tempore illo
             repudiandae id odit placeat minima modi, vel quibusdam error debitis? Corporis suscipit voluptatum
             architecto? Repudiandae, pariatur temporibus iste adipisci at commodi eaque, officiis in laboriosam modi
@@ -288,7 +279,7 @@
             fugit, soluta cum voluptatibus expedita sint hic facilis commodi, rem eveniet aut, ullam eaque iusto quidem
             doloremque mollitia omnis aliquam adipisci recusandae. Ullam porro quo magnam corporis. Deserunt ea quos
             recusandae quo quae illum possimus saepe? Eaque in eos voluptate, nihil ipsum deleniti! Dolore recusandae ut
-            enim eius, nostrum odit corporis blanditiis rem saepe.</p> -->
+            enim eius, nostrum odit corporis blanditiis rem saepe.</p>
     </main>
     <footer>
         <small>footer content</small>
@@ -310,7 +301,7 @@
                         <path
                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
                     </svg>
-                    <span>iconName</span>
+                    <span>albums</span>
                 </a>
             </li>
             <li>
@@ -319,7 +310,7 @@
                         <path
                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
                     </svg>
-                    <span>iconName</span>
+                    <span>correo</span>
                 </a>
             </li>
 
