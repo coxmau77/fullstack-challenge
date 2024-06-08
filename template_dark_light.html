@@ -1,52 +1,75 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<!-- <html lang="es-AR" class="light"> -->
+<html lang="es-AR" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>template form</title>
+    <title>dark light template</title>
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <!-- link temporal -->
     <link rel="stylesheet" href="./public/css/index.css">
     <style>
         /* utilizar tecnica mobile first */
         :root {
-            --main-clr: #00ffc2;
-            --light-clr: #f5f5f5;
-            --dark-clr: #041611;
             --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             --opacity: 0.6;
+
             --icon-size: 2.4rem;
             --paddin-x: 1.8rem;
             --paddin-y: 1.2rem;
             --spacing: 1rem 1rem;
-            accent-color: var(--main-clr);
 
-            h1 {
-                font-size: 3rem;
+
+            /* color-scheme: light dark; */
+            --main-clr: #00ffc2;
+            --light: #f3fffc;
+            --dark: #000a08;
+
+            --bg-clr: var(--light);
+            --txt-clr: var(--dark);
+            --input-br: var(--dark);
+
+            accent-color: var(--main-clr);
+            color: var(--txt-clr);
+
+            h1,
+            h2 {
                 font-weight: bold;
                 padding: var(--paddin-y) 0;
                 text-align: center;
+                text-wrap: balance;
 
                 &::first-letter {
                     text-transform: uppercase;
                 }
+            }
+
+            h1 {
+                font-size: 3rem;
+
             }
 
             h2 {
                 font-size: 2rem;
-                font-weight: bold;
-                padding: var(--paddin-y) 0;
-                text-align: center;
-
-                &::first-letter {
-                    text-transform: uppercase;
-                }
             }
+
+            p {
+                opacity: var(--opacity);
+                text-wrap: balance;
+            }
+
+
         }
 
-        * {
-            transition: all .2s ease-in-out;
+        html.dark {
+
+            /* color-scheme: dark; */
+            &:root {
+                --bg-clr: var(--dark);
+                --txt-clr: var(--light);
+                --input-br: var(--light);
+            }
         }
 
         html {
@@ -54,83 +77,82 @@
             font-family: var(--font);
         }
 
+        * {
+            transition: all .2s ease-in-out;
+        }
+
         body {
+            background-color: var(--bg-clr);
             font-size: large;
-            background-color: var(--light-clr);
             display: grid;
             height: 100dvh;
             grid-template-rows: auto 1fr auto;
             grid-template-areas: "header" "main" "footer";
             overflow-x: hidden;
             /* background-color: pink; */
+        }
 
-            p {
-                opacity: var(--opacity);
-            }
+        header {
+            /* background-color: lawngreen; */
+            grid-area: header;
+            border-bottom: 1px dotted var(--dark-clr);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing);
 
-            header {
-                /* background-color: lawngreen; */
-                grid-area: header;
-                border-bottom: 1px dotted var(--dark-clr);
+            a {
                 display: flex;
-                justify-content: space-between;
+                gap: .2rem;
                 align-items: center;
-                padding: var(--spacing);
 
-                a {
-                    display: flex;
-                    gap: .2rem;
-                    align-items: center;
-
-                    :first-child {
-                        width: var(--icon-size);
-                    }
-
-                    :last-child {
-                        display: none;
-                    }
+                :first-child {
+                    width: var(--icon-size);
                 }
 
-                span {
-
-                    display: flex;
-                    align-items: center;
-                    gap: .4rem;
-
-                    p {
-                        display: none;
-                    }
-
-                    img {
-                        width: var(--icon-size);
-                        border: 2px solid var(--dark-clr);
-                        border-radius: 10vw;
-                        overflow: hidden;
-                        object-fit: cover;
-                    }
+                :last-child {
+                    display: none;
                 }
             }
 
-            main {
-                /* background-color: rgba(255, 182, 193, 0.337); */
-                margin: 0 auto;
-                padding: var(--spacing);
-                grid-area: main;
+            span {
 
-                section {
-                    /* background-color: #00ffc2; */
-                    text-align: center;
+                display: flex;
+                align-items: center;
+                gap: .4rem;
+
+                p {
+                    display: none;
+                }
+
+                img {
+                    width: var(--icon-size);
+                    border: 2px solid var(--dark-clr);
+                    border-radius: 10vw;
+                    overflow: hidden;
+                    object-fit: cover;
                 }
             }
+        }
 
-            footer {
-                background-color: var(--dark-clr);
-                color: var(--light-clr);
-                grid-area: footer;
-                padding: 2rem 2rem 10rem 2rem;
-                width: 100%;
-                margin-top: 1rem;
+        main {
+            /* background-color: rgba(255, 182, 193, 0.337); */
+            margin: 0 auto;
+            padding: var(--spacing);
+            grid-area: main;
+
+            section {
+                text-align: center;
             }
+        }
+
+        footer {
+            background-color: var(--dark-clr);
+            color: var(--light-clr);
+            grid-area: footer;
+            padding: 2rem 2rem 10rem 2rem;
+            width: 100%;
+            margin-top: 1rem;
         }
 
         nav {
@@ -191,15 +213,16 @@
         form {
             /* background-color: beige; */
             margin: 2rem auto;
-            max-width: 450px;
+            max-width: 480px;
 
             input {
                 box-sizing: border-box;
                 border-radius: 10vw;
-                border: 1px solid var(--dark-clr);
+                border: 1px solid var(--input-br);
                 width: 100%;
-                margin-block: .4rem;
+                margin-block: .6rem;
                 padding: .6rem 1rem;
+                background-color: transparent;
             }
 
             [data-btn-group] {
@@ -209,6 +232,7 @@
                 margin-top: 1rem;
 
                 &:first-child {
+                    /* no funciona aun */
                     background-color: pink;
                 }
 
@@ -241,14 +265,14 @@
         <span>
             <p>email@email.com</p>
             <img src="./public/img/user/img-user-profile.png" alt="">
+            <button data-darklight>dark-light</button>
         </span>
     </header>
     <main>
         <section>
-            <h1>template form</h1>
+            <h1>dark light template</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, alias!</p>
         </section>
-
         <form>
             <h2>Lorem, ipsum dolor.</h2>
             <input type="email" name="email" placeholder="mail@email.com" required>
@@ -284,7 +308,7 @@
     <footer>
         <small>footer content</small>
     </footer>
-    <nav>
+    <!-- <nav>
         <ul>
             <li>
                 <a href="http://">
@@ -315,7 +339,7 @@
             </li>
 
         </ul>
-    </nav>
+    </nav> -->
 </body>
 
 </html>
