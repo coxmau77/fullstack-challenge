@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-AR" class="light">
-<html lang="es-AR" class="dark">
+<html lang="es-AR">
 
 <head>
     <meta charset="UTF-8">
@@ -379,6 +378,13 @@
 
         </ul>
     </nav> -->
+
+    <script>
+
+        document.querySelector('[data-darklight]').addEventListener('click', () => {
+            document.querySelector('html').classList.toggle('dark');
+        })
+    </script>
 </body>
 
 </html>
