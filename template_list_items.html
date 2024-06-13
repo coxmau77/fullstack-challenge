@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="es-AR" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="./public/css/index.css">
     <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
         :root {
             /* colors */
             --main-clr: #00ffc2;
@@ -99,6 +101,18 @@
 
                             color: var(--light);
                         }
+                    }
+                }
+
+                button {
+                    background-color: var(--main-clr);
+                    color: var(--dark);
+                    border-color: var(--main-clr);
+
+                    &:hover {
+                        background-color: var(--dark);
+                        color: var(--light);
+                        border-color: var(--light);
                     }
                 }
             }
@@ -208,6 +222,9 @@
 
         main {
             grid-area: main;
+            margin: 1.5rem auto;
+            max-width: 900px;
+
 
             section {
                 text-align: center;
@@ -258,13 +275,18 @@
                             color: var(--dark);
                             background-color: var(--main-clr);
                         }
+
+                        i {
+                            font-size: 1.4rem;
+                            text-align: center;
+                        }
                     }
 
-                    svg {
+                    /* svg {
                         fill: currentColor;
                         aspect-ratio: 1 / 1;
                         width: 2rem;
-                    }
+                    } */
 
                     span {
                         display: none;
@@ -277,7 +299,8 @@
             color: var(--dark);
             display: flex;
             flex-direction: column;
-            margin: 1.4rem 0;
+            margin: 1.4rem auto;
+            max-width: 550px;
 
             li {
                 display: flex;
@@ -358,12 +381,12 @@
         </span>
     </header>
     <main>
-        <div>
+        <!-- <div>
             <a href="./template.html">temp</a>
             <a href="./template_list_items.html">temp-list</a>
             <a href="./template_areas.html">temp-areas</a>
             <a href="./template_form.html">temp-form</a>
-        </div>
+        </div> -->
         <section>
             <h1>list items template</h1>
             <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, alias!</p>
@@ -454,37 +477,25 @@
         <ul>
             <li class="active">
                 <a href="http://">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                    </svg>
+                    <i class="bi bi-house-fill"></i>
                     <span>lista</span>
                 </a>
             </li>
             <li>
                 <a href="http://">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                    </svg>
+                    <i class="bi bi-calendar-heart-fill"></i>
                     <span>inicio</span>
                 </a>
             </li>
             <li>
                 <a href="http://">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                    </svg>
+                    <i class="bi bi-patch-plus-fill"></i>
                     <span>blog</span>
                 </a>
             </li>
             <li>
                 <a href="http://">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                    </svg>
+                    <i class="bi bi-envelope-fill"></i>
                     <span>perfil</span>
                 </a>
             </li>
