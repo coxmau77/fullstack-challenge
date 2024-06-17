@@ -6,6 +6,7 @@ button {
     background-color: var(--main-clr);
     font-size: medium;
     font-weight: 600;
+    width: fit-content;
 
     &::first-letter {
         text-transform: uppercase;

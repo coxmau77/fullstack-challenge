@@ -3,6 +3,7 @@
 @import url('./reset.css');
 @import url('./forms.css');
 @import url('./buttons.css');
+/* @import url('./tours.css'); */
 
 * {
     transition: all .2s ease-in-out;
@@ -18,7 +19,7 @@
     --deep-dark-clr: #020d09;
     --danger-clr: #ff6347;
     --opacity: 0.7;
-    --spacing: .6rem 1rem;
+    --spacing: .8rem 1rem;
     --icon-size: 1.8rem;
     accent-color: var(--main-clr);
 
@@ -101,6 +102,20 @@ body {
         font-style: italic;
     }
 
+    mark {
+        border-radius: 100vw;
+        padding-inline: .4rem;
+        margin-inline: .2rem;
+    }
+
+    hr {
+        border-style: dashed;
+        border-width: 1px;
+        color: var(--ternary-d-clr);
+        opacity: 0.2;
+        margin: 1rem 0;
+    }
+
 }
 
 header {
@@ -111,7 +126,7 @@ header {
     align-items: center;
     padding: var(--spacing);
 
-    a {
+    [data-brand] {
         display: flex;
         gap: .4rem;
 
@@ -133,13 +148,15 @@ header {
             display: none;
         }
 
-        img {
-            width: var(--icon-size);
-            height: var(--icon-size);
-            border-radius: 100vw;
+        a {
+
+            >img {
+                width: var(--icon-size);
+                height: var(--icon-size);
+                border-radius: 100vw;
+            }
         }
 
-        img,
         i:hover {
             cursor: pointer;
         }
@@ -147,11 +164,15 @@ header {
 }
 
 main {
+    /* background-color: #00ffc347; */
     padding: var(--spacing);
     grid-area: main;
-    min-width: fit-content;
-    max-width: 90vw;
-    margin: 0 auto;
+    /* min-width: fit-content; */
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* max-width: 900px; */
 
     section {
         text-align: center;
