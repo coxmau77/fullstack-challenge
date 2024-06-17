@@ -13,6 +13,12 @@ form {
         &::placeholder {
             color: var(--dark-clr);
         }
+
+        &:focus {
+            border-color: var(--main-clr);
+            box-shadow: 0 0 5px var(--main-clr);
+            outline: var(--main-clr);
+        }
     }
 
     small {

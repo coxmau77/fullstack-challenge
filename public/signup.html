@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>public/login.html</title>
+    <title>public/signup.html</title>
     <link rel="shortcut icon" href="./img/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -24,15 +24,20 @@
     </header>
     <main>
         <section>
-            <h1>login</h1>
-            <p><b>Inicia sesión</b> en con tus datos para ingresar a la plataforma.</p>
+            <h1>signUp</h1>
+            <p><b>Registrate como usuario</b> con tus datos.</p>
         </section>
         <form>
-            <!-- <h2>Inicia tu sesión</h2> -->
-            <input type="email" name="email" placeholder="mail@email.com" required>
+            <input type="text" name="name" placeholder="Ingresa tu nombre" required>
+            <small><i>Ej: Pepe Argento</i></small>
+            <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
             <small><i>Ej: tu-email@correo.com</i></small>
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="date" name="date" required>
+            <small><i>Fecha de nacimiento Ej: 05/11/1977</i></small>
+            <input type="password" name="password" placeholder="Ingresa una clave secreta" required>
             <small><i>Ej: miClav3secre3t4</i></small>
+            <input type="password" name="password" placeholder="Repite tu clave secreta" required>
+            <small><i>Ej: **************</i></small>
             <section>
                 <button type="reset">cancelar</button>
                 <button>iniciar sesión</button>
