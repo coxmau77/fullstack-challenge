@@ -16,9 +16,11 @@
     --dark-clr: #08120f;
     --main-clr: #00FFC2;
     --deep-dark-clr: #020d09;
+    --danger-clr: #ff6347;
     --opacity: 0.7;
     --spacing: .6rem 1rem;
     --icon-size: 1.8rem;
+    accent-color: var(--main-clr);
 
     /* elements */
     --txt-clr: var(--dark-clr);
@@ -61,11 +63,11 @@ body {
         font-size: 3rem;
         text-shadow: 0px 0px 50px var(--main-clr);
         line-height: 3rem;
-        margin-block: 1.8rem;
+        margin-block: 2rem;
     }
 
     h2 {
-        margin-block: .4rem;
+        margin-block: 1rem;
         font-size: 2rem;
     }
 
@@ -89,6 +91,14 @@ body {
 
     small {
         font-size: small;
+    }
+
+    b {
+        font-weight: 700;
+    }
+
+    i {
+        font-style: italic;
     }
 
 }
@@ -142,6 +152,10 @@ main {
     min-width: fit-content;
     max-width: 90vw;
     margin: 0 auto;
+
+    section {
+        text-align: center;
+    }
 }
 
 footer {
