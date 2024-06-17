@@ -263,4 +263,5 @@ nav {
 .active {
     background-color: var(--main-clr);
     color: var(--dark-clr);
+    border: 2px solid var(--dark-clr);
 }
