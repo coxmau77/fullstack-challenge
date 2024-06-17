@@ -1,99 +1,81 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List items template</title>
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <link rel="stylesheet" href="./public/css/index.css">
+    <title>SVG Dark Mode</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
         :root {
-            --light: white;
-            --dark: black;
-            --main-clr: tomato;
-
-            --txt-clr: var(--dark);
-            --bg-clr: var(--light);
-        }
-
-        html.dark {
-            --txt-clr: var(--light);
-            --bg-clr: var(--dark);
+            --main-clr: aquamarine;
+            /* Color para el modo claro */
+            --dark-clr: #08120f;
+            /* Color para el modo oscuro */
+            --stroke-clr: #ff5500;
+            /* Color de la línea */
         }
 
         body {
-            color: var(--txt-clr);
-            background-color: var(--bg-clr);
+            background-color: var(--dark-clr);
+            transition: background-color 0.3s ease;
         }
 
-
-
-
-        h1,
-        h2 {
-            font-weight: bold;
-            text-align: center;
-            padding: var(--p-y) 0;
-
-            &::first-letter {
-                text-transform: uppercase;
-            }
+        body.dark-mode {
+            background-color: #000;
+            /* Color de fondo para modo oscuro */
         }
 
-        h1 {
-            font-size: 3rem;
-            text-shadow: 0px 0px 50px var(--main-clr);
-            color: var(--main-clr);
+        .svg-container {
+            display: inline-block;
         }
 
-        h2 {
-            font-size: 2rem;
+        svg {
+            width: 56px;
+            height: 56px;
         }
 
-        h3 {
-            font-size: large;
-            font-weight: 900;
-            text-transform: uppercase;
-            padding: .2rem .6rem;
-            margin: .8rem 0 .2rem 0;
-            border-radius: 100vw;
-            border-left: .4rem solid var(--dark);
+        svg .bg {
+            fill: var(--main-clr);
         }
 
-        h4 {
-            font-size: large;
-            font-weight: 600;
-            line-height: normal;
+        svg .border {
+            stroke: var(--stroke-clr);
+        }
+
+        svg .details {
+            fill: var(--stroke-clr);
+        }
+
+        body.dark-mode svg .bg {
+            fill: var(--dark-clr);
+        }
+
+        body.dark-mode svg .border {
+            stroke: var(--main-clr);
+        }
+
+        body.dark-mode svg .details {
+            fill: var(--main-clr);
         }
     </style>
 </head>
 
 <body>
-
-    <main>
-        <mark data-darklight>dark-light</mark>
-        <section>
-            <h1>list items template</h1>
-            <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, alias!</p>
-        </section>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nulla eveniet sit molestiae illum eos
-            laboriosam totam exercitationem sequi deleniti.</p>
-        <h3>lorem.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque beatae debitis ab sed optio, eius quia alias
-            dolore, soluta minima vel. Qui cupiditate modi sit fugiat consequuntur dicta debitis nam.</p>
-        <button>lorem, ipsum.</button>
-        <button>lorem, ipsum.</button>
-        <button>lorem, ipsum.</button>
-        <button>lorem, ipsum.</button>
-    </main>
+    <div class="svg-container">
+        <svg id="icon" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="bg" x="1" y="1" width="54" height="54" rx="27" />
+            <rect class="border" x="1" y="1" width="54" height="54" rx="27" stroke-width="2" />
+            <path class="details"
+                d="M31.908 29.721c-1.185-.055-1.777-.083-2.27.186-.491.27-.788.783-1.38 1.81l-4.856 8.409c-1.47 2.545-2.204 3.817-1.665 4.803.54.986 2.007 1.055 4.943 1.192l8.51.398c1.185.055 1.778.083 2.27-.186s.789-.783 1.382-1.81l4.855-8.409c1.47-2.545 2.204-3.818 1.665-4.804-.54-.986-2.007-1.054-4.943-1.191l-8.511-.398ZM9.104 27.05a2 2 0 0 0-.031 1.944l6.403 11.952c.74 1.382 2.71 1.413 3.495.056l7.052-12.215a2 2 0 0 0 .02-1.962L19.56 15.013c-.75-1.367-2.706-1.388-3.485-.038L9.104 27.05ZM38.668 12.826c-.4-.693-.601-1.04-.9-1.276a2 2 0 0 0-.416-.255c-.346-.157-.746-.177-1.546-.216-8.2-.41-12.3-.614-12.918-.047-.326.3-.415.44-.55.862-.256.798 1.656 4.442 5.481 11.732l.487.927c.46.878.69 1.316 1.07 1.592.07.05.143.096.22.138.412.224.908.241 1.9.277l8.21.293c3.195.114 4.792.171 5.4-.84.607-1.01-.194-2.394-1.794-5.16l-4.644-8.027Z" />
+        </svg>
+    </div>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
     <script>
-
-        document.querySelector('[data-darklight]').addEventListener('click', () => {
-            document.querySelector('html').classList.toggle('dark');
-        })
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
     </script>
 </body>
 
