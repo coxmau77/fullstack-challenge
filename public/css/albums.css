@@ -1,5 +1,5 @@
 [data-albums] {
-    background-color: rgba(255, 255, 0, 0.544);
+    /* background-color: rgba(255, 255, 0, 0.544); */
     margin: 2rem 0;
     padding: .5rem;
 
@@ -10,9 +10,13 @@
 
 
     [data-album] {
-        background-color: rgba(0, 179, 255, 0.544);
+        background-color: white;
         padding: .5rem;
         max-width: 22rem;
+        border-radius: 8px;
+        box-shadow: 0px 5px 13px -9px rgba(0, 0, 0, 1);
+        -webkit-box-shadow: 0px 5px 13px -9px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 5px 13px -9px rgba(0, 0, 0, 1);
 
         img {
             width: 100%;
@@ -20,7 +24,7 @@
         }
 
         [data-description] {
-            background-color: rgba(255, 85, 0, 0.544);
+            /* background-color: rgba(255, 85, 0, 0.544); */
             padding: .5rem;
 
         }
@@ -30,14 +34,15 @@
         }
 
         [data-options] {
-            background-color: rgba(255, 85, 0, 0.544);
+            /* background-color: rgba(255, 85, 0, 0.544); */
             padding: .5rem;
             display: flex;
             justify-content: end;
             gap: 1rem;
 
             a {
-                background-color: rgba(255, 85, 0, 0.544);
+                background-color: var(--ternary-d-clr);
+                color: var(--ternary-l-clr);
                 padding: .5rem;
                 font-size: 1.4rem;
                 border-radius: 100vw;
