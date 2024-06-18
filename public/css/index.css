@@ -3,7 +3,6 @@
 @import url('./reset.css');
 @import url('./forms.css');
 @import url('./buttons.css');
-/* @import url('./tours.css'); */
 
 * {
     transition: all .2s ease-in-out;
@@ -36,6 +35,12 @@ html.dark {
     --bg-clr: var(--dark-clr);
     --ternary-d-clr: var(--light-clr);
     --ternary-l-clr: var(--dark-clr);
+
+    [data-list] {
+        li {
+            background-color: var(--deep-dark-clr);
+        }
+    }
 }
 
 body {
@@ -164,15 +169,11 @@ header {
 }
 
 main {
-    /* background-color: #00ffc347; */
     padding: var(--spacing);
     grid-area: main;
-    /* min-width: fit-content; */
-    /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* max-width: 900px; */
 
     section {
         text-align: center;
@@ -263,5 +264,4 @@ nav {
 .active {
     background-color: var(--main-clr);
     color: var(--dark-clr);
-    border: 2px solid var(--dark-clr);
 }
