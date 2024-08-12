@@ -99,3 +99,27 @@ Consola del navegador(cliente) como herramienta de desarrollo
 Primeros conceptos del Modelo `Cliente >< Servidor` - parte II
 
 Crear en una actividad donde se pueda utilizar la informacion que se captura en un input de un formulario (login o signin)
+
+## ERRORES que podemos encontrar
+
+### En el caso que veas este error en la consola del cliente, debe saber que:
+
+`Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'`
+
+Este aviso indica que estás intentando utilizar una característica experimental llamada `"Interest Cohort"` en tu sitio web, pero no has habilitado la prueba de origen (origin trial) correspondiente.
+
+`"Interest Cohort"` es una característica que permite a los sitios web agrupar a los usuarios en cohortes basadas en sus intereses, con el fin de proporcionar publicidad más relevante sin comprometer la privacidad de los usuarios.
+
+**Para habilitar esta característica**, debes registrarte en el programa de pruebas de origen de Google y agregar una cabecera específica a tu sitio web.
+
+Aquí te explico los pasos:
+
+1. Regístrate en el programa de pruebas de origen de Google:
+2. Busca la prueba de origen para "Interest Cohort" y regístrate para participar.
+3. Una vez aprobada tu solicitud, recibirás un token de prueba de origen.
+4. Agrega la siguiente cabecera a tu sitio web:
+   Permissions-Policy: interest-cohort=<token_de_prueba_de_origen>
+5. Reemplaza <token_de_prueba_de_origen> con el token que recibiste en el paso 3.
+6. Una vez que hayas completado estos pasos, el aviso debería desaparecer y podrás utilizar la característica "Interest Cohort" en tu sitio web.
+
+Ten en cuenta que las pruebas de origen son temporales y pueden cambiar o expirar en cualquier momento. Asegúrate de revisar la documentación oficial para obtener más información sobre las pruebas de origen y las características experimentales por lo que **no sera necesario que hagas esta configuracion para tu proyecto** :wink:
