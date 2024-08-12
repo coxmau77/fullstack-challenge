@@ -1,7 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('./reset.css');
-@import url('./forms.css');
-@import url('./buttons.css');
 
 * {
     transition: all .2s ease-in-out;
@@ -11,7 +9,7 @@
     /* font */
     --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* colors */
-    --light-clr: #e4fff6;
+    --light-clr: #f1fffa;
     --dark-clr: #08120f;
     --main-clr: #00FFC2;
     --deep-dark-clr: #020d09;
@@ -267,4 +265,247 @@ nav {
 .active {
     background-color: var(--main-clr);
     color: var(--dark-clr);
+}
+
+form {
+    margin: 2rem auto;
+    max-width: 550px;
+
+    input {
+        margin-top: 1rem;
+        padding: .6rem 1.4rem;
+        width: 100%;
+        border-radius: 100vw;
+        border: 2px solid var(--dark-clr);
+        color: var(--dark-clr);
+
+        &::placeholder {
+            color: var(--dark-clr);
+        }
+
+        &:focus {
+            border-color: var(--main-clr);
+            box-shadow: 0 0 5px var(--main-clr);
+            outline: var(--main-clr);
+        }
+    }
+
+    small {
+        margin-left: 1.4rem;
+        opacity: var(--opacity);
+    }
+
+    section {
+        display: flex;
+        gap: 1rem;
+        justify-content: end;
+        margin: 1rem 0;
+
+        :first-child {
+            background-color: transparent;
+            border-color: var(--ternary-d-clr);
+            color: var(--ternary-d-clr);
+
+            &:hover {
+                background-color: var(--danger-clr);
+                border-color: var(--danger-clr);
+                color: var(--light-clr);
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+button {
+    padding: .6rem 1.4rem;
+    border-radius: 100vw;
+    border: 2px solid var(--dark-clr);
+    color: var(--dark-clr);
+    background-color: var(--main-clr);
+    font-size: medium;
+    font-weight: 600;
+    width: fit-content;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 35px 8px var(--main-clr);
+        background-color: var(--dark-clr);
+        color: var(--main-clr);
+    }
+}
+
+[data-albums] {
+    /* background-color: rgba(255, 255, 0, 0.544); */
+    margin: 2rem 0;
+    padding: .5rem;
+
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    [data-album] {
+        background-color: white;
+        padding: .5rem;
+        max-width: 22rem;
+        border-radius: 8px;
+        box-shadow: 0px 5px 13px -9px rgba(0, 0, 0, 1);
+        -webkit-box-shadow: 0px 5px 13px -9px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 5px 13px -9px rgba(0, 0, 0, 1);
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        [data-description] {
+            /* background-color: rgba(255, 85, 0, 0.544); */
+            padding: .5rem;
+
+        }
+
+        small {
+            opacity: var(--opacity);
+        }
+
+        [data-options] {
+            /* background-color: rgba(255, 85, 0, 0.544); */
+            padding: .5rem;
+            display: flex;
+            justify-content: end;
+            gap: .4rem;
+
+            li {
+                background-color: var(--ternary-d-clr);
+                color: var(--ternary-l-clr);
+                border-radius: 100vw;
+                opacity: var(--opacity);
+
+                &:hover {
+                    background-color: var(--main-clr);
+                    color: var(--dark-clr);
+                    opacity: 1;
+                }
+
+                a {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+[data-list] {
+    /* background-color: rgba(255, 0, 119, 0.266); */
+    padding: .5rem;
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    li {
+        background-color: white;
+        display: grid;
+        grid-template-areas: "date" "info" "buy";
+        align-items: center;
+        /* border-bottom: 2px dashed var(--ternary-d-clr); */
+        padding: .5rem .3rem;
+        border-radius: 8px;
+
+        [data-date] {
+            grid-area: date;
+        }
+
+        [data-info] {
+            grid-area: info;
+        }
+
+        [data-buy] {
+            grid-area: buy;
+        }
+
+        >div {
+            background-color: var(--main-clr);
+            padding: .5rem;
+
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--dark-clr);
+            border: 2px solid var(--dark-clr);
+            border-radius: 8px;
+            font-weight: 600;
+
+            strong {
+                font-weight: 900;
+                font-size: 3.8rem;
+                line-height: normal;
+            }
+        }
+
+        section {
+            /* background-color: rgba(210, 47, 255, 0.266); */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            div {
+                /* background-color: rgba(0, 8, 255, 0.302); */
+                display: flex;
+                /* align-content: center; */
+
+                gap: .4rem;
+                /* max-width: 250px; */
+                margin: .5rem auto;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    /* width: 50%; */
+                    padding: .4rem;
+                    border-radius: 8px;
+                    background-color: rgba(255, 255, 255, 0.155);
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 500px) {
+    /* body {
+        background-color: red;
+    } */
+
+    [data-list] li {
+        grid-template-areas: "date info" "date info" "date buy";
+    }
+}
+
+@media(min-width: 900px) {
+    /* body {
+        background-color: lightgreen;
+    } */
+
+    [data-list] {
+        max-width: 960px;
+        margin: 1.5rem auto;
+
+        li {
+            grid-template-areas: "date info buy";
+        }
+    }
 }
