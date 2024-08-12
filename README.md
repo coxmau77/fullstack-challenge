@@ -6,6 +6,8 @@
 
 <a href="https://github.com/coxmau77/fullstack-challenge" target="_blank" rel="noopener noreferrer">gitHub repository</a>
 
+<!-- <a href="" target="_blank" rel="noopener noreferrer">txt</a> -->
+
 Proyecto basico desarrollado utilizando las tecnologias:
 
 - HTML
@@ -18,7 +20,8 @@ Proyecto basico desarrollado utilizando las tecnologias:
 
 En este proyecto podremos registrar usuarios en la plataforma y lograr hacer un CRUD con este usuario.
 
-[Documentacion grafica](https://www.figma.com/file/Qqy8RI4BIAt7HVGlSMgu2H/fullstack-challenge?type=design&node-id=0-1&mode=design&t=0Ilho6AltuAmwFqA-0)
+[]()
+<a href="https://www.figma.com/design/Qqy8RI4BIAt7HVGlSMgu2H/fullstack-challenge?node-id=0-1&t=kQWUTraUVBHt3TjA-1">Documentacion grafica</a>
 
 ## Proceso
 
