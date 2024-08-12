@@ -1,10 +1,13 @@
 # Fullstack challenge
 
-[![](./public/img/img-repository-fullstack-challenge(1).png)](https://coxmau77.github.io/fullstack-challenge/public/)
+<a href="https://coxmau77.github.io/fullstack-challenge/public/" target="_blank" rel="noopener noreferrer">
+  <img src="./public/img/img-repository-fullstack-challenge.png" alt="">
+</a>
 
-[gitHub repository](https://github.com/coxmau77/fullstack-challenge)
+<a href="https://github.com/coxmau77/fullstack-challenge" target="_blank" rel="noopener noreferrer">gitHub repository</a>
 
 Proyecto basico desarrollado utilizando las tecnologias:
+
 - HTML
 - CSS
 - javaScript
@@ -28,25 +31,23 @@ En este proyecto podremos registrar usuarios en la plataforma y lograr hacer un 
 - Creación de cuenta en MongoAtlas
 - Creación de cuenta en RENDER
 
-
-
 ### 01. **Estructura basica del challenge**
 
 Iniciamos desde gitHub, por lo que en principio deberemos tener una cuenta creada, comandos basicos con git, clonar, comprender **main** y **master**, `git add .`, que es `.gitignore`, pull y push
 
-Primeros comandos por consola. 
+Primeros comandos por consola.
 
-Estructura y definicion de la arquitectura del proyecto en `HTML`, `MVC`, `HTML semantic` _(nav, section, article, header, aside)_, `favicon`. 
+Estructura y definicion de la arquitectura del proyecto en `HTML`, `MVC`, `HTML semantic` _(nav, section, article, header, aside)_, `favicon`.
 
-Primeros pasos en `Figma`. 
+Primeros pasos en `Figma`.
 
-Aplicamos estilos CSS utilizando `selectores avanzados`, `CSS Nesting`, `Variables CSS`, Pseudo elementos como `:root`, `:after`, `:before`, Concepto mobile First, rem, em. 
+Aplicamos estilos CSS utilizando `selectores avanzados`, `CSS Nesting`, `Variables CSS`, Pseudo elementos como `:root`, `:after`, `:before`, Concepto mobile First, rem, em.
 
-Creacion y vinculacion con los primeros documentos en un ***lenguaje de programacion***, javaScript `script.js` `server.js`
+Creacion y vinculacion con los primeros documentos en un **_lenguaje de programacion_**, javaScript `script.js` `server.js`
 
 Primeros conceptos del Modelo `Cliente >< Servidor` - parte I
 
-``` 
+```
 public
 ├─css
 │ └─style.css
@@ -70,7 +71,7 @@ Github (GitHub Pages, portada Repository, add, commit, push)
 
 ### 03. **CSS flexbox, advanced selectors**
 
-Estilo y alineacion `header` , Flexbox, 
+Estilo y alineacion `header` , Flexbox,
 
 Dar proporciones a los contenedores y dar formato a los formularios
 
@@ -88,11 +89,10 @@ Revision de conceptos e implementacion de variables y constantes, tipos de datos
 
 Etiqueta form, input(text, password, button, submit)
 
-``document.querySelector()`` para almacenar en una variable y acceder a su valor con el Metodo `.value`
+`document.querySelector()` para almacenar en una variable y acceder a su valor con el Metodo `.value`
 
 Consola del navegador(cliente) como herramienta de desarrollo
 
 Primeros conceptos del Modelo `Cliente >< Servidor` - parte II
 
 Crear en una actividad donde se pueda utilizar la informacion que se captura en un input de un formulario (login o signin)
-
