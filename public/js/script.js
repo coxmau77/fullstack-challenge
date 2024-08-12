@@ -5,3 +5,5 @@
 document.querySelector("[data-darklight]").addEventListener("click", () => {
   document.querySelector("html").classList.toggle("dark");
 });
+
+document.querySelector("html").classList.add("dark");

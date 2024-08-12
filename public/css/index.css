@@ -2,7 +2,7 @@
 @import url('./reset.css');
 
 * {
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 :root {
@@ -356,7 +356,6 @@ button {
         border-radius: 8px;
         box-shadow: 0px 5px 13px -9px rgba(0, 0, 0, 1);
         -webkit-box-shadow: 0px 5px 13px -9px rgba(0, 0, 0, 1);
-        /* -moz-box-shadow: 0px 5px 13px -9px rgba(0, 0, 0, 1); */
 
         img {
             width: 100%;
@@ -489,6 +488,13 @@ button {
     /* body {
         background-color: red;
     } */
+
+    [data-brand] {
+
+        :last-child {
+            display: block;
+        }
+    }
 
     [data-list] li {
         grid-template-areas: "date info" "date info" "date buy";
