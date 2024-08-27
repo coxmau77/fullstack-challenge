@@ -175,9 +175,11 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     section {
         text-align: center;
+        /* background-color: #00ffc317; */
     }
 }
 
@@ -325,6 +327,7 @@ button {
     font-size: medium;
     font-weight: 600;
     width: fit-content;
+    margin: .5rem 0;
 
     &::first-letter {
         text-transform: uppercase;
